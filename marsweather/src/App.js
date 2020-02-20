@@ -13,7 +13,7 @@ const App = () => {
     return (
         <Provider store={ store }>
         <div className="nav-wrapper grey darken-3 white-text center">
-            Test           
+            Random Coding Jokes         
         </div>
         <Data />
         </Provider>

@@ -5,21 +5,21 @@ import { getData } from "../actions";
 
 const Data = ({ state, getData }) => {
     return (
-        <>
-        <div className="center"><button className="btn" onClick={ () => getData() }>Get Joke</button></div>
-        {(state.isLoading) ? (<div className="center"><img src="https://i.imgur.com/vOpj1aC.gif" alt="loading" /></div>) : (
+        <div className="center black" style={ { marginTop: 100 } }>
+        <div><button className="btn teal" onClick={ () => getData() }>Get Joke</button></div>
+        {(state.isLoading) ? (<div><img src="https://i.imgur.com/vOpj1aC.gif" alt="loading" /></div>) : (
             state.joke.type==="single" ?
-            <div className="center">{ state.joke.joke }</div> : 
+            <div className="white-text">{ state.joke.joke }</div> : 
             <>
-                <div className="center">{ state.joke.setup }</div> 
-                <div id="button" className="center"><button className="btn" onClick={ () => { 
+                <div className="white-text">{ state.joke.setup }</div> 
+                <div><button id="button" className="btn" onClick={ () => { 
                     document.getElementById("punchline").classList.toggle("hidden");
                     document.getElementById("button").classList.toggle("hidden")
                     } }>Punchline</button></div>  
-                <div id="punchline" className="hidden center">{ state.joke.delivery }</div> 
+                <div id="punchline" className="hidden white-text">{ state.joke.delivery }</div> 
             </>
         )}
-        </>
+        </div>
     )
 }
 

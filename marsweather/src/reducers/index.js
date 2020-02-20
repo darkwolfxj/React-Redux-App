@@ -1,7 +1,7 @@
 import { GET_DATA, UPDATE_STATE, SET_ERROR } from "../actions";
 export const initState = {
     isLoading: false,
-    joke: { }
+    joke: { type: "single" }
 }
 
 export const rootReducer = (state = initState, action) => {

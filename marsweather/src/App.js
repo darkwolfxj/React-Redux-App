@@ -12,7 +12,7 @@ const store = createStore(rootReducer, applyMiddleware(thunk))
 const App = () => {
     return (
         <Provider store={ store }>
-        <div className="nav-wrapper grey darken-3 white-text center">
+        <div className="center white-text grey">
             Random Coding Jokes         
         </div>
         <Data />
